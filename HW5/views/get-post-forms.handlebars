@@ -1,0 +1,32 @@
+<h1>{{message}}</h1>
+{{#if query}}
+  <table>
+    <caption>Name-Value pairs (from URL)</caption>
+    <tr>
+        <th>Name</th>
+        <th>Value</th>
+    </tr>
+    {{#each queryDataList}}
+        <tr>
+            <td>{{this.name}}</td>
+            <td>{{this.value}}</td>
+        </tr>
+    {{/each}}
+  </table>
+{{/if}}
+{{#if post}}
+  <div></div>
+  <table>
+    <caption>Name-Value pairs (from POST body)</caption>
+    <tr>
+        <th>Name</th>
+        <th>Value</th>
+    </tr>
+    {{#each bodyDataList}}
+        <tr>
+            <td>{{this.name}}</td>
+            <td>{{this.value}}</td>
+        </tr>
+    {{/each}}
+  </table>
+{{/if}}
